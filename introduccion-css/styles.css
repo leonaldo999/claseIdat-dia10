@@ -1,0 +1,72 @@
+/* Sintaxis */
+/* h1 {
+  color: red;
+} */
+
+
+/* 4 Conceptos importantes de CSS */
+
+/* SELECTORES */
+/* SELECTOR DE ETIQUETA */
+/* h1 {
+  color: red;
+} */
+
+/* SELECTOR DE DESCENDENCIA */
+/* nav ul li a {
+  color: red;
+} */
+
+
+/* HERENCIA */
+/* p {
+  color: violet;
+}
+
+a {
+  color: inherit;
+} */
+
+
+/* CASCADA */
+/* h1 {
+  color: blue;
+}
+
+h1 {
+  color: green;
+
+h1 {
+  color: red;
+} */
+
+
+/* ESPECIFICIDAD */
+/* Selector de Etiqueta (4) */
+/* nav ul li a {
+  color: red;
+} */
+
+/* Selector de Etiqueta (1) */
+/* a {
+  color: blue;
+} */
+
+/* INLINE (1000) */
+/* <h1 style="color: red;">CSS <span>Cascade Style Sheet</span></h1> */
+
+
+/* ESPECIFICIDAD: IMPORTANT (infinito) */
+/* No es muy recomendable usarlo mucho , ya que puede  generar  conflictos  con   otros  estilos  */
+/* .padre #hijo {
+  color: red;
+}
+
+h1 {
+  color: blue !important;
+} */
+
+/* ESPECIFICIDAD: clase y ID = 110 */
+/* .padre #hijo {
+  color: red;
+} */

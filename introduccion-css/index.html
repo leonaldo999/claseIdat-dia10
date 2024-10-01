@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dia 10 - sesion 01 - introduccion CSS</title>
+  <link rel="stylesheet" href="../introduccion-css/styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>Introduccion CSS</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#sintax">Sintaxis</a></li>
+      <li><a href="#selectores">Selectores</a></li>
+      <li><a href="#herencia">Herencia</a></li>
+      <li><a href="#cascada">Cascada</a></li>
+      <li><a href="#especificidad">Especificidad</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section id="sintax">
+      <!-- Sintaxis -->
+      <h2>Sintaxis</h2>
+      <p>
+      <pre>
+      <code>
+        h1 {
+          color: red;
+        }
+      </code>
+    </pre>
+      </p>
+      <ul>
+        <li>
+          <p>
+            <strong>h1</strong>: Selectores
+          </p>
+        </li>
+        <li>
+          <p>
+            <strong>color</strong>: Propiedad
+          </p>
+        </li>
+        <li>
+          <p>
+            <strong>red</strong>: Valor
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="selectores">
+      <!-- 4 Conceptos importantes de CSS -->
+      <!-- Selectores -->
+      <h2>Selectores</h2>
+      <p>
+      <pre>
+        <code>
+          /* SELECTOR DE ETIQUETA */
+            h1 {
+              color: red;
+            }
+          /* SELECTOR DE DESCENDENCIA */
+            nav ul li a {
+              color: red;
+            }
+        </code>
+      </pre>
+      </p>
+    </section>
+
+    <section id="herencia">
+      <!-- Herencia -->
+      <h2>Herencia</h2>
+      <p>Hola mundo <a href="#">Esto es un enlace</a></p>
+      <p>
+      <pre>
+        <code>
+          p {
+            color: peru;
+          }
+          
+          a {
+            color: inherit;
+          }
+        </code>
+      </pre>
+      </p>
+    </section>
+
+    <section id="cascada">
+      <!-- CASCADA -->
+      <h2>Cascada</h2>
+      <p>
+        Significa que los estilos que llegan en ultimo lugar , sobreescriben a los de antes.
+        <br>La especificidad vence a la cascada
+      </p>
+      <p>
+      <pre>
+      <code>
+        h1 {
+          color: red;
+        }
+        
+        h1 {
+          color: blue;
+        }
+      </code>
+    </pre>
+      </p>
+    </section>
+
+    <section id="especificidad">
+      <!-- Especificidad -->
+      <h2>Especificidad</h2>
+      <p>
+        Selector de Etiqueta (1)
+        <br>
+        Selector de Clase (10)
+        <br>
+        Selector de ID (100)
+        <br>
+        INLINE (1000)
+        <br>
+        IMPORTANT (infinito)
+      </p>
+      <p>
+      <pre>
+        <code>
+          /* Selector de Etiqueta (4) */
+            nav ul li a {
+              color: red;
+            }
+
+          /* Selector de Etiqueta (1) */
+            a {
+              color: blue;
+            }
+
+          /* INLINE (1000) */
+          <h1 style="color: red;">CSS <span>Cascade Style Sheet</span></h1>
+
+          /* ESPECIFICIDAD: IMPORTANT (infinito) */
+          <!-- No es muy recomendable usarlo mucho , ya que puede  generar  conflictos  con   otros  estilos -->
+            .padre #hijo {
+              color: red;
+            }
+
+            h1 {
+              color: blue !important;
+            }
+
+          /* ESPECIFICIDAD: clase y ID = 110 */
+            .padre #hijo {
+              color: red;
+            }
+        </code>
+      </pre>
+      </p>
+    </section>
+
+    <!-- <section>
+    <h2>Ejemplos:</h2>
+    ESPECIFICIDAD: clase y ID = 110
+    <div class="padre">
+      <div id="hijo">
+        <h1>HIJO</h1>
+      </div>
+    </div>
+  </section> -->
+  </main>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+
+</html>
